@@ -105,8 +105,8 @@ class User(AbstractBaseUser):
     USERNAME_FIELD = 'citizenship_number'
     REQUIRED_FIELDS = ['email']
 
-    def __str__(self):
-        return str(self.citizenship_number)
+    # def __str__(self):
+    #     return str(self.citizenship_number)
 
     def has_perm(self, perm, obj=None):
         "Does the user have a specific permission?"

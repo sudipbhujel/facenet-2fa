@@ -1,0 +1,199 @@
+#brand {
+  font-family: "Montserrat";
+  font-size: 40px;
+  font-weight: bold;
+  color: #2e279d;
+}
+
+p {
+  font-family: "Montserrat";
+}
+
+.nav-edit {
+  padding: 20px 2rem;
+}
+
+.navbar-nav > li > a {
+  line-height: 2;
+}
+
+.container-edit {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+  border-radius: 25px;
+}
+
+.main-header {
+  background: #fcfcfc;
+}
+
+.index-heading {
+  width: 26rem;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 5.3rem;
+  color: #2e279d;
+  margin: 81px 0 0 54px;
+  padding-bottom: 10px;
+}
+
+.index-description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  padding-left: 54px;
+}
+
+.index-image {
+  display: block;
+  width: 26rem;
+  /* height: 397px;
+  left: 885px;
+  top: 199px; */
+  padding-right: 2rem;
+  text-align: center;
+  margin: auto;
+}
+
+.reglog-container {
+  margin-top: 65px;
+  text-align: center;
+  background: #2e279d;
+  padding-bottom: 22px;
+}
+
+.reglog-heading {
+  padding: 22px;
+  font-weight: bold;
+  font-size: 3.5rem;
+  line-height: 68px;
+
+  color: #ffffff;
+}
+
+.reglog-description {
+  width: 80%;
+  margin: auto;
+  font-size: 24px;
+  line-height: 28px;
+  padding-bottom: 40px;
+  color: #ffffff;
+}
+
+.reslog-link {
+  padding: 10px;
+}
+
+.footer {
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* Register.html */
+.reg-heading {
+  height: 40px;
+  width: 100%;
+  background: #4d80e4;
+  border-radius: 20px;
+  color: #ffffff;
+  margin: 10px auto;
+  text-align: center;
+  line-height: 2.5;
+}
+
+.form-row-edit {
+  margin: 10px 0 0 0;
+}
+
+.sub-reg-heading {
+  text-align: center;
+}
+
+.form-details {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* ================LOGIN================ */
+.card-theme{
+  text-align: center;
+  background-color: #FCFCFC;
+}
+
+.login-button{
+  border-radius: 100px;
+  color: white;
+  background-color: #2E279D;
+  width: 120px;
+  /* height: 50px; */
+}
+
+@media(min-width:1000px){
+  .col-custom{
+    padding: 0 5rem;
+  }
+}
+
+@media(min-width:1440px){
+  .col-custom{
+    padding: 0 7rem;
+  }
+}
+
+/* ================Home================ */
+#home-header{
+  padding: 2rem 1rem;
+  margin-bottom: 20px;
+}
+
+@media(max-width:900px){
+  .voters-details{
+    text-align: center;
+    padding-bottom: 10px;
+    /* margin-bottom: ; */
+  }
+}
+
+.vote-status-btn{
+  width: 70px;
+  background-color: #F40909;
+  border-radius: 100px;
+  color:white;
+}
+
+h1, h2, h3, h4, h5{
+  font-family: Montserrat;
+}
+
+.candidate-list{
+  /* padding-top: 10rem; */
+  margin: 0 5%;
+}
+
+.candidate-header{
+  font-style: normal;
+  font-size: 30px;
+  font-weight: bold;
+  color: #2E279D;
+  
+}
+
+.candidate-card {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.candidate-name{
+  line-height: 1.5;
+  font-style: normal;
+  font-weight: bold;
+  color: #2E279D;
+}
+
+/* For label */
+label {
+  font-family: "Montserrat";
+}

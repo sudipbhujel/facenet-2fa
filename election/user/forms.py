@@ -8,7 +8,7 @@ class UserForm(forms.ModelForm):
         label='Confirm Password', widget=forms.PasswordInput)
 
     class Meta():
-        model = MyUser
+        model = User
         fields = ('citizenship_number', 
                 'password', 
                 'confirm_password', 

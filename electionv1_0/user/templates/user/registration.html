@@ -1,0 +1,609 @@
+{% extends 'user/base.html'%}
+{% block body_block %}
+
+
+
+<form enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+    <!-- demograhic-details -->
+    <div class="container-edit">
+        <div class="reg-heading demographic">
+            <p>Demographic Details</p>
+        </div>
+        <div class="form-details">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="first_name">First Name</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="first_name" placeholder="First Name" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="middle_name">Middle Name</label>
+                            </div>
+                            <div class="col">
+                                <input class="form-control" type="text" name="middle_name" placeholder="Middle Name" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="last_name">Last Name:</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="last_name" placeholder="Last Name" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="mothers_name">Mother's Name:</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="mothers_name" placeholder="Mother's Name" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="fathers_name">Father's Name:</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="fathers_name" placeholder="Father's Name" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="gender">Gender</label>
+                            </div>
+                            <div class="col">
+                                <select id="gender" name="gender" class="form-control form-row">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="others">Others</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="date_of_birth">Date of birth</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="date" name="date_of_birth" placeholder="Date of birth" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="education">Education</label>
+                            </div>
+                            <div class="col">
+                                <input class="form-control" type="text" name="education" placeholder="Education" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="occupation">Occupation</label>
+                            </div>
+                            <div class="col">
+                                <input class="form-control" type="text" name="occupation" placeholder="Occupation" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="post">Post</label>
+                            </div>
+                            <div class="col">
+                                <input class="form-control" type="text" name="post" placeholder="Post" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="citizenship_number">Citizenship No.</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="citizenship_number" placeholder="Citizenship Number" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="citizenship_issued_district">Citizenship issued District</label>
+                            </div>
+                            <div class="col">
+                                <select name="citizenship_issued_district" class="form-control form-row">
+                                    <option value selected>Select District</option>
+                                    <option value="dolakha">Dolakha</option>
+                                    <option value="bhaktapur">Bhaktapur</option>
+                                    <option value="kathmandu">Kathmandu</option>
+                                    <option value="lalitpur">Lalitpur</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="passport_number">Passport No.</label>
+                            </div>
+                            <div class="col">
+                                <input class="form-control" type="text" name="passport_number" placeholder="Passport Number" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="blood_group">Blood Group</label>
+                            </div>
+                            <div class="col">
+                                <input class="form-control" type="text" name="blood_group" placeholder="Blood Group" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Address Details -->
+    <div class="container-edit">
+        <div class="reg-heading addre-details">
+            <p>Address Details</p>
+        </div>
+        <div class="sub-reg-heading">
+            <p>Present Address</p>
+        </div>
+        <div class="form-details">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="present_state">State</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="present_state" placeholder="State" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="present_zone">Zone</label>
+                            </div>
+                            <div class="col">
+                                <select id="zone" name="present_zone" class="form-control form-row">
+                                    <option value selected>Select Zone</option>
+                                    <option value="janakpur">Janakpur</option>
+                                    <option value="bagmati">Bagmati</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="present_district">District</label>
+                            </div>
+                            <div class="col">
+                                <select name="present_district" class="form-control form-row">
+                                    <option value selected>Select District</option>
+                                    <option value="dolakha">Dolakha</option>
+                                    <option value="bhaktapur">Bhaktapur</option>
+                                    <option value="kathmandu">Kathmandu</option>
+                                    <option value="lalitpur">Lalitpur</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="present_rmm">Rural Muncipality/ Muncipality</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="present_rmm" placeholder="RM/M" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="present_ward">Ward No.</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="present_ward" placeholder="Ward Number" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="present_tole">Tole</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="present_tole" placeholder="Tole" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="present_block">Block No.</label>
+                            </div>
+                            <div class="col">
+                                <input class="form-control" type="text" name="present_block" placeholder="Block Number" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="present_contact">Contact No.</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="present_contact" placeholder="Contact Number" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-reg-heading">
+                <p>Permanent Address</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+
+                                <label for="permanent_state">State</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="permanent_state" placeholder="State" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+
+                                <label for="permanent_zone">Zone</label>
+                            </div>
+                            <div class="col">
+                                <select name="permanent_zone" class="form-control form-row">
+                                    <option value selected>Select Zone</option>
+                                    <option value="janakpur">Janakpur</option>
+                                    <option value="bagmati">Bagmati</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="permanent_district">District</label>
+                            </div>
+                            <div class="col">
+                                <select name="permanent_district" class="form-control form-row">
+                                    <option value selected>Select District</option>
+                                    <option value="dolakha">Dolakha</option>
+                                    <option value="bhaktapur">Bhaktapur</option>
+                                    <option value="kathmandu">Kathmandu</option>
+                                    <option value="lalitpur">Lalitpur</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="permanent_rmm">Rural Muncipality/ Muncipality</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="permanent_rmm" placeholder="RM/M" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+
+                                <label for="permanent_ward">Ward No.</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="permanent_ward" placeholder="Ward Number" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="permanent_tole">Tole</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="permanent_tole" placeholder="Tole" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+
+                                <label for="permanent_block">Block No.</label>
+                            </div>
+                            <div class="col">
+                                <input class="form-control" type="text" name="permanent_block" placeholder="Block Number" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="permanent_contact">Contact No.</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="permanent_contact" placeholder="Contact Number" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Voting Details -->
+    <div class="container-edit">
+        <div class="reg-heading voting-details">
+            <p>Voting Details</p>
+        </div>
+        <div class="form-details">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="voting_state">State</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="voting_state" placeholder="State" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="voting_district">District</label>
+                            </div>
+                            <div class="col">
+                                <select name="voting_district" class="form-control form-row">
+                                    <option value selected>Select District</option>
+                                    <option value="dolakha">Dolakha</option>
+                                    <option value="bhaktapur">Bhaktapur</option>
+                                    <option value="kathmandu">Kathmandu</option>
+                                    <option value="lalitpur">Lalitpur</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="voting_rmm">Rural Muncipality/ Muncipality</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="voting_rmm" placeholder="RM/M" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="voting_ward">Ward No.</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="voting_ward" placeholder="Ward Number" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="voting_tole">Tole</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="voting_tole" placeholder="Tole" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="voting_booth">Booth No.</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="voting_booth" placeholder="Booth Number" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="voting_country">Country</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="text" name="voting_country" placeholder="Country" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="email" name="email" placeholder="Email" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="password">Password</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="password" name="password" placeholder="Password" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="form-row form-row-edit">
+                            <div class="col">
+                                <label for="confirm_password">Confirm Password</label>
+                            </div>
+                            <div class="col">
+                                <input required class="form-control" type="password" name="confirm_password" placeholder="Password" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- {{ user_form.as_p }} -->
+            <div style="text-align: center;">
+                <input class="btn btn-outline-primary" type="submit" name="" value="Register">
+            </div>
+
+        </div>
+    </div>
+
+</form>
+{% endblock %}

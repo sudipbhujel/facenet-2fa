@@ -1,0 +1,36 @@
+{% extends 'user/base.html' %}
+
+{% load static %}
+
+{% block body_block %}
+    <!-- index-header -->
+    <div id="main" class="container-edit main-header">
+        <div class="row">
+            <div class="col-lg-8">
+                <p class="index-heading">
+                    Vote your candidates
+                </p>
+                <p class="index-description">
+                    Both rest of know draw fond post as. It agreement defective to excellent. Feebly do engage of
+                    narrow. Both rest of know draw fond post as. It agreement defective to excellent. Feebly do engage
+                    of narrow. Both rest of know draw fond post as. It agreement defective
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <img class="index-image" src="{% static 'user/img/voting.png' %}" alt="voting">
+            </div>
+        </div>
+    </div>
+
+    <!-- reglog div -->
+    <div id="reglog" class="reglog-container container-edit">
+        <p class="reglog-heading">Secure your spot</p>
+        <p class="reglog-description">Both rest of know draw fond post as. It defective to excellent. Feebt of know draw
+            fond post as. It agreement defective to excellent. Feebly
+            do engage of narrow. </p>
+        <a class="reslog-link" href="{% url 'user:register'%}"><button type="button" class="btn btn-secondary">Register</button></a>
+        <a class="" href="{% url 'user:user_login'%}"><button type="button" class="btn btn-outline-primary">Login</button></a>
+    </div>
+{% endblock %}
+
+

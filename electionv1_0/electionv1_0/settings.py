@@ -25,7 +25,7 @@ SECRET_KEY = '0)ks!$p@lxx&n(y5gug2+w!3bwatztf@t(arguk9xb0n@=zyfw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.1.3', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -76,10 +76,21 @@ WSGI_APPLICATION = 'electionv1_0.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'electionv1_0',
+        'USER': 'postgres',
+        'PASSWORD': 'Sudip@123',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 

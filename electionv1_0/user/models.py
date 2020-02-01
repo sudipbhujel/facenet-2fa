@@ -109,7 +109,8 @@ class User(AbstractBaseUser):
     voting_country = models.CharField(verbose_name='Country', max_length=255)
     email = models.EmailField(verbose_name='Email Address', max_length=255)
 
-
+    is_voter = models.BooleanField(default=True)
+    is_candidate = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
 

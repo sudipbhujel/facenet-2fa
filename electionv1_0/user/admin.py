@@ -114,7 +114,7 @@ class UserAdmin(BaseUserAdmin):
                                        'voting_country',
                                        'email'
                                        )}),
-        ('Permissions', {'fields': ('is_admin', 'is_active')}),
+        ('Permissions', {'fields': ('is_candidate', 'is_voter', 'is_admin', 'is_active')}),
     )
     # add_fieldsets is not a standard ModelAdmin attribute. UserAdmin
     # overrides get_fieldsets to use this attribute when creating a user.
@@ -170,8 +170,9 @@ class UserAdmin(BaseUserAdmin):
                                        'voting_tole',
                                        'voting_booth',
                                        'voting_country',
-                                   
-                                       )})
+                                       )}),
+        ('Permissions', {'classes': ('wide', 'extrapretty'),
+                            'fields': ('is_candidate',)})
     )
     search_fields = ('email',)
     ordering = ('email',)

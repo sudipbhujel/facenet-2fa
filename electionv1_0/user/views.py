@@ -29,6 +29,8 @@ def register(request):
             user.save()
             registered = True
             return render(request, 'user/login.html', {})
+        else:
+            return HttpResponse('Fill correctly!!')
     else:
         user_form = UserForm()
         context={'user_form': user_form, 

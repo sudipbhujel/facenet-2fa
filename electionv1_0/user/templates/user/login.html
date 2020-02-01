@@ -11,8 +11,8 @@
         </div>
       </div> -->
     <div class="row">
-        <div class="col-3"></div>
-        <div class="col-custom col-6">
+        <div class="col-md-2 col-lg-3"></div>
+        <div class="col-custom col-md-8 col-lg-6">
             <div class="card-theme card">
                 <div class="card-body">
                     <h5 class="card-title">Login</h5>
@@ -23,7 +23,7 @@
                     <form method="POST" action="{% url 'user:user_login' %}">
                         {% csrf_token %}
                         <div class="form-group">
-                            <label for="citizenship_number">Email address</label>
+                            <label for="citizenship_number">Citizenship Number</label>
                             <input type="text" class="form-control" name="citizenship_number" aria-describedby="citizenshipNumberHelp"
                                 placeholder="Citizenship Number">
                             <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-3"></div>
+        <div class="col-md-2 col-lg-3"></div>
     </div>
 
 {% endblock %}

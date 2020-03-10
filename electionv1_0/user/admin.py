@@ -6,6 +6,9 @@ from django.contrib.auth.forms import ReadOnlyPasswordHashField
 
 from .models import User
 
+
+admin.site.site_header = 'Election'
+
 """
 UserCreationForm,
 UserChangeForm
